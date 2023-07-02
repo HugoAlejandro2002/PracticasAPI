@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "postulacions",
+  "info": {
+    "singularName": "postulacion",
+    "pluralName": "postulacions",
+    "displayName": "postulacion",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "practica": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::practica.practica"
+    },
+    "users_permissions_user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    }
+  }
+}

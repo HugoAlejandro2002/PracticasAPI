@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "practicas",
+  "info": {
+    "singularName": "practica",
+    "pluralName": "practicas",
+    "displayName": "Practica",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Titulo": {
+      "type": "string"
+    },
+    "Descripcion": {
+      "type": "text"
+    },
+    "Status": {
+      "type": "enumeration",
+      "enum": [
+        "progreso",
+        "acabada",
+        "disponible"
+      ]
+    },
+    "users_permissions_user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "practicas"
+    },
+    "docente": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "practicas_docente"
+    }
+  }
+}
